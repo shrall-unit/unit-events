@@ -72,7 +72,7 @@ function EventCategories() {
               >
                 <Image
                   src={event.image}
-                  alt="Photo by="
+                  alt={event.name}
                   priority
                   quality={100}
                   fill

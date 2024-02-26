@@ -4,6 +4,7 @@ import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 
 import EventCategories from "./components/EventCategories";
+import UpcomingEvents from "./components/UpcomingEvents";
 
 export default function Home() {
   return (
@@ -40,6 +41,7 @@ export default function Home() {
         </p>
       </section>
       <EventCategories />
+      <UpcomingEvents />
     </Layout>
   );
 }
