@@ -31,13 +31,13 @@ function Navbar() {
   return (
     <div
       className={cn(
-        "w-full fixed top-0 z-10",
+        "w-full fixed top-0 z-50",
         isScrolled ? "bg-white" : "bg-transparent",
       )}
     >
       <div
         className={cn(
-          "w-full max-w-[1200px] mx-auto flex items-center gap-x-8 py-6 left-0 right-0 font-semibold font-poppins transition-all",
+          "w-full max-w-[1200px] mx-auto flex items-center gap-x-8 py-6 left-0 right-0 font-medium font-poppins transition-all",
           isScrolled ? "text-unit-black" : "text-white",
         )}
       >
