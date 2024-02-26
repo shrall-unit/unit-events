@@ -3,6 +3,8 @@ import Image from "next/image";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 
+import EventCategories from "./components/EventCategories";
+
 export default function Home() {
   return (
     <Layout>
@@ -29,7 +31,7 @@ export default function Home() {
           </Button>
         </div>
       </section>
-      <section className="max-w-[1200px] py-52 text-center mx-auto flex flex-col items-center justify-center gap-y-8">
+      <section className="text-center flex flex-col items-center justify-center gap-y-8">
         <h2 className="font-semibold text-4xl">Play, Learn, Network</h2>
         <p className="text-xl text-unit-gray px-32">
           Explore the future of events with Unit Network where cryptocurrency
@@ -37,6 +39,7 @@ export default function Home() {
           experiences!
         </p>
       </section>
+      <EventCategories />
     </Layout>
   );
 }
