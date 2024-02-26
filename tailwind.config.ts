@@ -21,6 +21,7 @@ const config = {
       colors: {
         unit: {
           black: "#34354a",
+          gray: "#525252",
         },
       },
       fontFamily: {

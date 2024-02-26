@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 export default function Home() {
   return (
     <Layout>
-      <div className="relative w-full h-full flex flex-col items-center justify-center">
+      <section className="relative w-full h-full flex flex-col items-center justify-center">
         <Image
           src="/images/hero-section-background.png"
           alt="Unit Events"
@@ -28,7 +28,15 @@ export default function Home() {
             Explore Events
           </Button>
         </div>
-      </div>
+      </section>
+      <section className="max-w-[1200px] py-52 text-center mx-auto flex flex-col items-center justify-center gap-y-8">
+        <h2 className="font-semibold text-4xl">Play, Learn, Network</h2>
+        <p className="text-xl text-unit-gray px-32">
+          Explore the future of events with Unit Network where cryptocurrency
+          and blockchain enthusiasts come together to forge unforgettable
+          experiences!
+        </p>
+      </section>
     </Layout>
   );
 }
