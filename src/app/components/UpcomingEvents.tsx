@@ -1,4 +1,4 @@
-import { ArrowRightIcon } from "lucide-react";
+import { ArrowRightIcon, ChevronDownIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -93,6 +93,10 @@ function UpcomingEvents() {
             </Card>
           </div>
         ))}
+        <div className="flex items-center justify-center font-medium text-2xl text-slate-500 gap-x-4 cursor-pointer w-fit mx-auto">
+          <span>See All</span>
+          <ChevronDownIcon />
+        </div>
       </div>
     </section>
   );
