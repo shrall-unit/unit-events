@@ -9,7 +9,7 @@ import UpcomingEvents from "./components/UpcomingEvents";
 export default function Home() {
   return (
     <Layout>
-      <section className="relative w-full h-full flex flex-col items-center justify-center">
+      <section className="relative w-full flex flex-col items-center justify-center">
         <Image
           src="/images/hero-section-background.png"
           alt="Unit Events"
@@ -32,9 +32,9 @@ export default function Home() {
           </Button>
         </div>
       </section>
-      <section className="text-center flex flex-col items-center justify-center gap-y-8">
+      <section className="text-center flex flex-col items-center justify-center gap-y-8 px-12 xl:px-24">
         <h2 className="font-semibold text-4xl">Play, Learn, Network</h2>
-        <p className="text-xl text-unit-gray px-32">
+        <p className="text-xl text-unit-gray">
           Explore the future of events with Unit Network where cryptocurrency
           and blockchain enthusiasts come together to forge unforgettable
           experiences!

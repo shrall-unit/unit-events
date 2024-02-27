@@ -56,52 +56,52 @@ const events: Events[] = [
 
 function EventCategories() {
   return (
-    <section className="w-full flex flex-col gap-y-8 pl-12 xl:pl-24">
+    <section className="w-full flex flex-col gap-y-12 pl-12 xl:pl-24">
       <div className="flex flex-col gap-y-4">
         <h2 className="font-semibold text-4xl">Event Categories</h2>
-        <p className="text-xl text-unit-gray">
+        <p className="text-xl text-slate-500">
           Discover a curated selection of events designed to captivate and
           engage every crypto enthusiast.
         </p>
-        <ScrollArea className="w-full whitespace-nowrap">
-          <div className="flex w-max gap-x-10">
-            {events.map((event) => (
-              <div
-                key={event.name}
-                className="overflow-hidden rounded-md w-72 h-80 relative text-white"
-              >
-                <Image
-                  src={event.image}
-                  alt={event.name}
-                  priority
-                  quality={100}
-                  fill
-                  className="object-cover -z-10"
-                />
-                <div className="p-8 flex flex-col items-center justify-center text-center h-full gap-y-4 break-words">
-                  <Image
-                    src={unitLogoWhite}
-                    alt={event.name}
-                    width={32}
-                    height={32}
-                    priority
-                  />
-                  <div className="w-full h-full bg-black opacity-40 absolute -z-10"></div>
-                  <h4 className="text-3xl font-poppins mt-auto font-semibold whitespace-break-spaces">
-                    {event.name}
-                  </h4>
-                  <Link href={event.link}>
-                    <div className="flex items-center gap-x-1 font-medium">
-                      Explore <MoveUpRightIcon />
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-          <ScrollBar orientation="horizontal" />
-        </ScrollArea>
       </div>
+      <ScrollArea className="w-full whitespace-nowrap">
+        <div className="flex w-max gap-x-6">
+          {events.map((event) => (
+            <div
+              key={event.name}
+              className="overflow-hidden rounded-md w-72 h-80 relative text-white"
+            >
+              <Image
+                src={event.image}
+                alt={event.name}
+                priority
+                quality={100}
+                fill
+                className="object-cover -z-10"
+              />
+              <div className="p-8 flex flex-col items-center justify-center text-center h-full gap-y-4 break-words">
+                <Image
+                  src={unitLogoWhite}
+                  alt={event.name}
+                  width={32}
+                  height={32}
+                  priority
+                />
+                <div className="w-full h-full bg-black opacity-40 absolute -z-10"></div>
+                <h4 className="text-3xl font-poppins mt-auto font-semibold whitespace-break-spaces">
+                  {event.name}
+                </h4>
+                <Link href={event.link}>
+                  <div className="flex items-center gap-x-1 font-medium">
+                    Explore <MoveUpRightIcon />
+                  </div>
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+        <ScrollBar orientation="horizontal" />
+      </ScrollArea>
     </section>
   );
 }

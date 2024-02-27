@@ -13,7 +13,7 @@ function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const { height } = useWindowSize();
   const checkScroll = () => {
-    if (height !== null && window.scrollY >= height) {
+    if (height !== null && window.scrollY >= height - 50) {
       setIsScrolled(true);
     } else {
       setIsScrolled(false);
@@ -31,7 +31,7 @@ function Navbar() {
   return (
     <div
       className={cn(
-        "w-full fixed top-0 z-50",
+        "w-full fixed top-0 z-50 left-0",
         isScrolled ? "bg-white shadow-sm" : "bg-transparent",
       )}
     >

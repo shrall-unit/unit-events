@@ -49,7 +49,7 @@ function UpcomingEvents() {
     <section className="w-full flex flex-col gap-y-12 px-12 xl:px-24">
       <div className="flex flex-col gap-y-4">
         <h2 className="font-semibold text-4xl">Upcoming Events</h2>
-        <p className="text-xl text-unit-gray">
+        <p className="text-xl text-slate-500">
           A selection of our upcoming events.
         </p>
       </div>
