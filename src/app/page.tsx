@@ -66,7 +66,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <FAQ className='mb-48' />
+      <FAQ className='mb-32' />
     </Layout>
   );
 }
