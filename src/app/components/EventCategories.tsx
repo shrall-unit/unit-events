@@ -56,7 +56,7 @@ const events: Events[] = [
 
 function EventCategories() {
   return (
-    <section className="w-full flex flex-col gap-y-12 pl-12 xl:pl-24">
+    <section className="w-full flex flex-col gap-y-12 pl-12 xl:pl-32">
       <div className="flex flex-col gap-y-4">
         <h2 className="font-semibold text-4xl">Event Categories</h2>
         <p className="text-xl text-slate-500">
@@ -88,7 +88,7 @@ function EventCategories() {
                   priority
                 />
                 <div className="w-full h-full bg-black opacity-40 absolute -z-10"></div>
-                <h4 className="text-3xl font-poppins mt-auto font-semibold whitespace-break-spaces">
+                <h4 className="text-3xl mt-auto font-semibold whitespace-break-spaces">
                   {event.name}
                 </h4>
                 <Link href={event.link}>

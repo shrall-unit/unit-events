@@ -46,7 +46,7 @@ const upcomingEvents: UpcomingEvents[] = [
 
 function UpcomingEvents() {
   return (
-    <section className="w-full flex flex-col gap-y-12 px-12 xl:px-24">
+    <section className="w-full flex flex-col gap-y-12 px-12 xl:px-32">
       <div className="flex flex-col gap-y-4">
         <h2 className="font-semibold text-4xl">Upcoming Events</h2>
         <p className="text-xl text-slate-500">
@@ -56,7 +56,7 @@ function UpcomingEvents() {
       <div className="flex flex-col gap-y-8 ">
         {upcomingEvents.map((event) => (
           <div key={event.name} className="flex shadow-lg drop-shadow-sm">
-            <div className="w-96 h-80 relative">
+            <div className="w-96 h-auto relative">
               <Image
                 src={event.image}
                 alt={event.name}

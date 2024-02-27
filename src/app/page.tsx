@@ -32,7 +32,7 @@ export default function Home() {
           </Button>
         </div>
       </section>
-      <section className="text-center flex flex-col items-center justify-center gap-y-8 px-12 xl:px-24">
+      <section className="text-center flex flex-col items-center justify-center gap-y-8 px-12 xl:px-32">
         <h2 className="font-semibold text-4xl">Play, Learn, Network</h2>
         <p className="text-xl text-unit-gray">
           Explore the future of events with Unit Network where cryptocurrency
@@ -42,6 +42,29 @@ export default function Home() {
       </section>
       <EventCategories />
       <UpcomingEvents />
+      <section className="w-full flex flex-col gap-y-12 px-12 xl:px-32">
+        <div className="flex flex-col gap-y-4">
+          <h2 className="font-semibold text-4xl">Our Past Events</h2>
+          <p className="text-xl text-slate-500">
+            A selection of our past events.
+          </p>
+        </div>
+        <video controls preload="auto" loop className="w-full rounded-xl">
+          <source src="/videos/home.mp4" type="video/mp4" />
+        </video>
+        <div className="relative">
+          <Image
+            src="/images/past-event.png"
+            alt="Unit Events"
+            priority
+            quality={100}
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="w-full h-screen object-cover rounded-xl"
+          />
+        </div>
+      </section>
     </Layout>
   );
 }

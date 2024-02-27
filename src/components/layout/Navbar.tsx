@@ -37,7 +37,7 @@ function Navbar() {
     >
       <div
         className={cn(
-          "w-full px-12 xl:px-24 flex items-center gap-x-8 py-6 left-0 right-0 font-medium font-poppins transition-all",
+          "w-full px-12 xl:px-32 flex items-center gap-x-8 py-6 left-0 right-0 font-medium font-poppins transition-all",
           isScrolled ? "text-unit-black" : "text-white",
         )}
       >
