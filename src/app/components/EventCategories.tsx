@@ -31,34 +31,34 @@ const events: Events[] = [
     link: '/',
   },
   {
-    name: 'Crypto Conference',
-    image: '/images/crypto-conference.jpeg',
+    name: 'Crypto Dance Party',
+    image: '/images/crypto-dance-party.jpeg',
     link: '/',
   },
   {
-    name: 'Crypto Angels',
-    image: '/images/crypto-angels.jpeg',
+    name: 'Crypto Football Cup',
+    image: '/images/crypto-football-cup.jpeg',
     link: '/',
   },
   {
-    name: 'Crypto Conference',
-    image: '/images/crypto-conference.jpeg',
+    name: 'Crypto HODL Challenge',
+    image: '/images/crypto-hodl-challenge.jpeg',
     link: '/',
   },
   {
-    name: 'Crypto Angels',
-    image: '/images/crypto-angels.jpeg',
+    name: 'Crypto Poker Tour',
+    image: '/images/crypto-poker-tour.jpeg',
+    link: 'https://cryptopokertour.org/',
+  },
+  {
+    name: 'Crypto Run',
+    image: '/images/crypto-run.jpeg',
     link: '/',
   },
   {
-    name: 'Crypto Conference',
-    image: '/images/crypto-conference.jpeg',
-    link: '/',
-  },
-  {
-    name: 'Crypto Angels',
-    image: '/images/crypto-angels.jpeg',
-    link: '/',
+    name: 'Crypto Ski Week',
+    image: '/images/crypto-ski.jpeg',
+    link: 'https://cryptoskiweek.com/',
   },
 ];
 
@@ -109,7 +109,7 @@ function EventCategories() {
                     className='self-start'
                   />
                   <div className='absolute -z-10 h-full w-full bg-black opacity-40'></div>
-                  <div className='mt-auto flex flex-col'>
+                  <div className='mt-auto flex w-full flex-col'>
                     <h4 className='whitespace-break-spaces text-3xl font-semibold'>
                       {event.name}
                     </h4>
