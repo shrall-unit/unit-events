@@ -45,7 +45,7 @@ export default function Home() {
       </section>
       <EventCategories />
       <UpcomingEvents />
-      <section className='flex w-full flex-col gap-y-12 px-12 xl:px-32'>
+      <section className='flex w-full flex-col gap-y-12 px-12 lg:px-48 xl:px-72 2xl:px-96'>
         <div className='flex flex-col gap-y-4'>
           <h2 className='text-3xl font-semibold md:text-4xl'>
             Our Past Events
