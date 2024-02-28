@@ -61,7 +61,7 @@ function UpcomingEvents() {
                 <Image
                   src={event.image}
                   alt={event.name}
-                  priority
+                  priority={true}
                   quality={100}
                   fill
                   className='-z-10 rounded-l-md object-cover'
@@ -98,7 +98,7 @@ function UpcomingEvents() {
                 <Image
                   src={event.image}
                   alt={event.name}
-                  priority
+                  priority={true}
                   quality={100}
                   fill
                   className='-z-10 object-cover object-top'

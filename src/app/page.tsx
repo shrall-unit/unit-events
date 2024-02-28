@@ -14,7 +14,7 @@ export default function Home() {
         <Image
           src='/images/hero-section-background.png'
           alt='Unit Events'
-          priority
+          priority={true}
           quality={100}
           width={0}
           height={0}
@@ -61,7 +61,7 @@ export default function Home() {
           <Image
             src='/images/past-event.png'
             alt='Unit Events'
-            priority
+            priority={true}
             quality={100}
             width={0}
             height={0}

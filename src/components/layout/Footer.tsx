@@ -36,7 +36,7 @@ function Footer() {
           alt='Unit Network'
           width={24}
           height={24}
-          priority
+          priority={true}
         />
         <span className='text-sm font-normal'>
           Copyright © {currentYear} Powered by Unit Network

@@ -49,7 +49,7 @@ function Navbar() {
               src={isScrolled ? unitLogoBlack : unitLogoWhite}
               alt='Unit Network'
               fill
-              priority
+              priority={true}
               quality={100}
             />
           </div>

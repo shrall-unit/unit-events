@@ -79,7 +79,7 @@ function EventCategories() {
               <Image
                 src={event.image}
                 alt={event.name}
-                priority
+                priority={true}
                 quality={100}
                 fill
                 className='-z-10 object-cover'
@@ -90,7 +90,7 @@ function EventCategories() {
                   alt={event.name}
                   width={32}
                   height={32}
-                  priority
+                  priority={true}
                 />
                 <div className='absolute -z-10 h-full w-full bg-black opacity-40'></div>
                 <h4 className='mt-auto whitespace-break-spaces text-3xl font-semibold'>
