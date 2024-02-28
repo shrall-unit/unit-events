@@ -33,9 +33,11 @@ export default function Home() {
           </Button>
         </div>
       </section>
-      <section className='flex flex-col items-center justify-center gap-y-8 px-12 text-center xl:px-32'>
-        <h2 className='text-4xl font-semibold'>Play, Learn, Network</h2>
-        <p className='text-xl text-unit-gray'>
+      <section className='flex flex-col items-start justify-center gap-y-8 px-12 md:items-center md:text-center xl:px-32'>
+        <h2 className='text-3xl font-semibold md:text-4xl'>
+          Play, Learn, Network
+        </h2>
+        <p className='text-lg text-slate-500 md:text-xl'>
           Explore the future of events with Unit Network where cryptocurrency
           and blockchain enthusiasts come together to forge unforgettable
           experiences!
