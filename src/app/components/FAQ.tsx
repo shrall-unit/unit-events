@@ -43,7 +43,9 @@ function FAQ({ className, ...props }: React.HTMLProps<HTMLDivElement>) {
       {...props}
     >
       <div className='flex flex-col gap-y-4'>
-        <h2 className='text-4xl font-semibold'>Frequently Asked Questions</h2>
+        <h2 className='text-3xl font-semibold md:text-4xl'>
+          Frequently Asked Questions
+        </h2>
       </div>
       <Separator />
       <Accordion type='single' collapsible>
