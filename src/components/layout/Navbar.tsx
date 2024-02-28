@@ -54,9 +54,9 @@ function Navbar() {
             />
           </div>
           <div className='hidden items-center gap-x-8 md:flex'>
-            <Link href='#'>Unit Network</Link>
-            <Link href='#'>Events</Link>
-            <Link href='#'>FAQ</Link>
+            <Link href='https://www.unit.network/'>Unit Network</Link>
+            <Link href='#events'>Events</Link>
+            <Link href='#faq'>FAQ</Link>
           </div>
           <SheetTrigger>
             <CgMenuRightAlt className='block size-8 md:hidden' />
@@ -66,13 +66,13 @@ function Navbar() {
       <SheetContent className='w-full'>
         <ul className='flex flex-col items-end justify-end gap-y-6 font-poppins text-xl font-semibold'>
           <li>
-            <Link href='#'>Unit Network</Link>
+            <Link href='https://www.unit.network/'>Unit Network</Link>
           </li>
           <li>
-            <Link href='#'>Events</Link>
+            <Link href='#events'>Events</Link>
           </li>
           <li>
-            <Link href='#'>FAQ</Link>
+            <Link href='#faq'>FAQ</Link>
           </li>
         </ul>
       </SheetContent>

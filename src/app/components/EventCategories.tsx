@@ -64,7 +64,7 @@ const events: Events[] = [
 
 function EventCategories() {
   return (
-    <section className='flex w-full flex-col gap-y-12'>
+    <section id='events' className='flex w-full flex-col gap-y-12'>
       <div className='flex flex-col gap-y-4 px-12 xl:px-32'>
         <h2 className='text-3xl font-semibold md:text-4xl'>Event Categories</h2>
         <p className='text-lg text-slate-500 md:text-xl'>

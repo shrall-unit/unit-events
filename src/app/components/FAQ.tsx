@@ -39,6 +39,7 @@ const faqs: FAQ[] = [
 function FAQ({ className, ...props }: React.HTMLProps<HTMLDivElement>) {
   return (
     <section
+      id='faq'
       className={cn(
         'flex w-full flex-col gap-y-12 px-12 lg:px-48 xl:px-72 2xl:px-96',
         className,
