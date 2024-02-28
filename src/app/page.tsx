@@ -47,8 +47,10 @@ export default function Home() {
       <UpcomingEvents />
       <section className='flex w-full flex-col gap-y-12 px-12 xl:px-32'>
         <div className='flex flex-col gap-y-4'>
-          <h2 className='text-4xl font-semibold'>Our Past Events</h2>
-          <p className='text-xl text-slate-500'>
+          <h2 className='text-3xl font-semibold md:text-4xl'>
+            Our Past Events
+          </h2>
+          <p className='text-lg text-slate-500 md:text-xl'>
             A selection of our past events.
           </p>
         </div>
@@ -64,7 +66,7 @@ export default function Home() {
             width={0}
             height={0}
             sizes='100vw'
-            className='h-screen w-full rounded-xl object-cover'
+            className='w-full rounded-xl object-cover'
           />
         </div>
       </section>
