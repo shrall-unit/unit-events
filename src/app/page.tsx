@@ -22,9 +22,9 @@ export default function Home() {
           className='h-screen w-full object-cover'
         />
         <div className='absolute top-0 z-10 h-screen w-screen bg-black opacity-20'></div>
-        <div className='absolute z-50 flex flex-col items-center justify-center gap-y-6 text-center font-poppins font-semibold text-white'>
-          <h1 className='text-7xl'>Unit Events</h1>
-          <p className='text-xl font-light tracking-wider'>
+        <div className='absolute z-50 flex flex-col items-center justify-center gap-y-6 px-12 text-center font-poppins font-semibold text-white xl:px-32'>
+          <h1 className='text-6xl md:text-7xl'>Unit Events</h1>
+          <p className='text-lg font-light tracking-wider md:text-xl'>
             Unit Network Announces an Exciting Lineup of Global Crypto Events
             for 2024
           </p>
