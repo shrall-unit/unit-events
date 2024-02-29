@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 
 import EventCategories from './components/EventCategories';
 import FAQ from './components/FAQ';
+import PastEvents from './components/PastEvents';
 import UpcomingEvents from './components/UpcomingEvents';
 
 export default function Home() {
@@ -22,7 +23,7 @@ export default function Home() {
           className='h-screen w-full object-cover'
         />
         <div className='absolute top-0 z-10 h-screen w-screen bg-black opacity-20'></div>
-        <div className='absolute z-50 flex flex-col items-center justify-center gap-y-6 px-12 text-center font-poppins font-semibold text-white xl:px-32'>
+        <div className='absolute z-50 flex flex-col items-center justify-center gap-y-6 px-8 text-center font-poppins font-semibold text-white xl:px-32'>
           <h1 className='text-6xl md:text-7xl'>Unit Events</h1>
           <p className='text-lg font-light tracking-wider md:text-xl'>
             Unit Network Announces an Exciting Lineup of Global Crypto Events
@@ -33,7 +34,7 @@ export default function Home() {
           </Button>
         </div>
       </section>
-      <section className='flex flex-col items-start justify-center gap-y-8 px-12 md:items-center md:text-center xl:px-32'>
+      <section className='flex flex-col items-start justify-center gap-y-8 px-8 md:items-center md:text-center xl:px-32'>
         <h2 className='text-3xl font-semibold md:text-4xl'>
           Play, Learn, Network
         </h2>
@@ -45,31 +46,7 @@ export default function Home() {
       </section>
       <EventCategories />
       <UpcomingEvents />
-      <section className='flex w-full flex-col gap-y-12 px-12 lg:px-48 xl:px-72 2xl:px-96'>
-        <div className='flex flex-col gap-y-4'>
-          <h2 className='text-3xl font-semibold md:text-4xl'>
-            Our Past Events
-          </h2>
-          <p className='text-lg text-slate-500 md:text-xl'>
-            A selection of our past events.
-          </p>
-        </div>
-        <video controls preload='auto' loop className='w-full rounded-xl'>
-          <source src='/videos/home.mp4' type='video/mp4' />
-        </video>
-        <div className='relative'>
-          <Image
-            src='/images/past-event.png'
-            alt='Unit Events'
-            priority={true}
-            quality={100}
-            width={0}
-            height={0}
-            sizes='100vw'
-            className='w-full rounded-xl object-cover'
-          />
-        </div>
-      </section>
+      <PastEvents />
       <FAQ className='mb-16 md:mb-24 lg:mb-32' />
     </Layout>
   );

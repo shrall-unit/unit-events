@@ -65,7 +65,7 @@ const events: Events[] = [
 function EventCategories() {
   return (
     <section id='events' className='flex w-full flex-col gap-y-12'>
-      <div className='flex flex-col gap-y-4 px-12 xl:px-32'>
+      <div className='flex flex-col gap-y-4 px-8 xl:px-32'>
         <h2 className='text-3xl font-semibold md:text-4xl'>Event Categories</h2>
         <p className='text-lg text-slate-500 md:text-xl'>
           Discover a curated selection of events designed to captivate and
@@ -79,7 +79,7 @@ function EventCategories() {
         }}
         className='group/carousel w-full'
       >
-        <CarouselContent className='mx-12 xl:mx-32'>
+        <CarouselContent className='mx-8 xl:mx-32'>
           {events.map((event, index) => (
             <CarouselItem
               key={event.name}
@@ -88,7 +88,7 @@ function EventCategories() {
               <div
                 className={cn(
                   'relative h-96 w-72 overflow-hidden rounded-2xl text-white',
-                  events.length - 1 === index && 'mr-12 md:mr-32',
+                  events.length - 1 === index && 'mr-8 md:mr-32',
                 )}
               >
                 <Image
@@ -125,8 +125,8 @@ function EventCategories() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className='hidden !opacity-0 transition-all duration-500 group-hover/carousel:scale-110 group-hover/carousel:!opacity-100 md:flex' />
-        <CarouselNext className='hidden !opacity-0 transition-all duration-500 group-hover/carousel:scale-110 group-hover/carousel:!opacity-100 md:flex' />
+        <CarouselPrevious className='hidden opacity-0 transition-all duration-500 disabled:!opacity-0 group-hover/carousel:scale-110 group-hover/carousel:opacity-100 md:flex' />
+        <CarouselNext className='hidden opacity-0 transition-all duration-500 disabled:!opacity-0 group-hover/carousel:scale-110 group-hover/carousel:opacity-100 md:flex' />
       </Carousel>
     </section>
   );
