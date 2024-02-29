@@ -25,42 +25,292 @@ type UpcomingEvents = {
 
 const upcomingEvents: UpcomingEvents[] = [
   {
-    name: 'Niseko - Crypto Ski Week',
-    image: '/images/crypto-ski-week.jpeg',
+    name: 'Unit Network Unconference @ETHDenver',
+    image: '/images/denver.jpg',
     link: '/',
-    date: '31st - 1st',
+    date: '1st',
     month_year: 'March, 2024',
-    location: 'Niseko, Japan',
+    location: 'Denver, Colorado',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
   },
   {
-    name: 'Miami - Crypto Run',
-    image: '/images/crypto-run.jpeg',
+    name: 'Crypto Ski Week Colorado',
+    image: '/images/colorado.jpg',
     link: '/',
-    date: '11th - 28nd',
+    date: '4th - 7th',
     month_year: 'March, 2024',
-    location: 'Miami, United States',
+    location: 'Breckenridge, Colorado',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
   },
   {
-    name: 'Los Angeles - Crypto Unconference ',
-    image: '/images/crypto-conference.jpeg',
+    name: 'Crypto Ski Week Japan',
+    image: '/images/hokkaido.jpg',
     link: '/',
-    date: '2nd - 4th',
+    date: '15th - 17th',
+    month_year: 'March, 2024',
+    location: 'Niseko, Hokkaido',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  {
+    name: 'Crypto Ski Week Chamonix',
+    image: '/images/chamonix.jpg',
+    link: '/',
+    date: '29th - 1st',
+    month_year: 'March & April, 2024',
+    location: 'Chamonix, Auvergne-Rhône-Alpes',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  {
+    name: 'Unit Network Unconference Paris',
+    image: '/images/paris.jpg',
+    link: '/',
+    date: '12th - 15th',
     month_year: 'April, 2024',
-    location: 'Los Angeles, United States',
+    location: 'Paris, Île-de-France',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
   },
   {
-    name: 'Paris - Crypto Angels',
-    image: '/images/crypto-angels.jpeg',
+    name: 'Unit Network Unconference London',
+    image: '/images/london.jpg',
+    link: '/',
+    date: '26th - 28th',
+    month_year: 'April, 2024',
+    location: 'London, England',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  {
+    name: 'Unit Network Unconference Cairo',
+    image: '/images/cairo.jpg',
+    link: '/',
+    date: '10th - 11th',
+    month_year: 'May, 2024',
+    location: 'Cairo, Cairo Governorate',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  {
+    name: 'Unit Network Unconference Accra',
+    image: '/images/accra.jpg',
+    link: '/',
+    date: '24th - 25th',
+    month_year: 'May, 2024',
+    location: 'Accra, Greater Accra Region',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  {
+    name: 'Unit Network Unconference Mumbai',
+    image: '/images/mumbai.jpg',
+    link: '/',
+    date: '8th - 9th',
+    month_year: 'June, 2024',
+    location: 'Mumbai, Maharashtra',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  {
+    name: 'Unit Network Unconference Istanbul',
+    image: '/images/istanbul.jpg',
+    link: '/',
+    date: '21th',
+    month_year: 'June, 2024',
+    location: 'Istanbul, Marmara Region',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  {
+    name: 'Unit Network Unconference New York',
+    image: '/images/newyork.jpg',
+    link: '/',
+    date: '12th - 13th',
+    month_year: 'July, 2024',
+    location: 'Register for Location',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  {
+    name: 'Unit Network Unconference Miami',
+    image: '/images/miami.jpg',
+    link: '/',
+    date: '26th - 27th',
+    month_year: 'July, 2024',
+    location: 'Miami, Florida',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  {
+    name: 'Unit Network Unconference Rio',
+    image: '/images/rio.jpg',
+    link: '/',
+    date: '9th - 10th',
+    month_year: 'August, 2024',
+    location: 'Rio de Janeiro, State of Rio de Janeiro',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  {
+    name: 'Unit Network Unconference Buenos Aires',
+    image: '/images/buenosaires.jpg',
+    link: '/',
+    date: '23th - 24th',
+    month_year: 'August, 2024',
+    location: 'Buenos Aires, Buenos Aires',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  {
+    name: 'Unit Network Unconference @Burning Man',
+    image: '/images/burningman.jpg',
+    link: '/',
+    date: '29th',
+    month_year: 'August, 2024',
+    location: 'Register for Location',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  {
+    name: 'Unit Network Unconference Hong Kong',
+    image: '/images/hongkong.jpg',
+    link: '/',
+    date: '14th - 15th',
+    month_year: 'September, 2024',
+    location: 'Hong Kong, Hong Kong',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  {
+    name: 'Unit Network Unconference Singapore',
+    image: '/images/singapore.jpg',
+    link: '/',
+    date: '27th - 28th',
+    month_year: 'September, 2024',
+    location: 'Singapore, Singapore',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  {
+    name: 'Unit Network Unconference Berlin',
+    image: '/images/berlin.jpg',
+    link: '/',
+    date: '11th - 12th',
+    month_year: 'October, 2024',
+    location: 'Berlin, Berlin',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  {
+    name: 'Unit Network Unconference Lisbon',
+    image: '/images/lisbon.jpg',
+    link: '/',
+    date: '25th - 26th',
+    month_year: 'October, 2024',
+    location: 'Register for Location',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  {
+    name: 'Unit Network Unconference Cape Town',
+    image: '/images/capetown.jpg',
+    link: '/',
+    date: '9th - 10th',
+    month_year: 'November, 2024',
+    location: 'Cape Town, Western Cape',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  {
+    name: 'Unit Network Unconference Nairobi',
+    image: '/images/nairobi.jpg',
+    link: '/',
+    date: '22th',
+    month_year: 'November, 2024',
+    location: 'Register for Location',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  {
+    name: 'Unit Network Unconference Dubai',
+    image: '/images/dubai.jpg',
+    link: '/',
+    date: '6th',
+    month_year: 'December, 2024',
+    location: 'Register for Location',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  {
+    name: 'Unit Network Unconference Riyadh',
+    image: '/images/riyadh.jpg',
     link: '/',
     date: '13th',
-    month_year: 'April, 2024',
-    location: 'Paris, France',
+    month_year: 'December, 2024',
+    location: 'Register for Location',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  {
+    name: 'Unit Network Unconference San Francisco',
+    image: '/images/sanfrancisco.jpg',
+    link: '/',
+    date: '10th',
+    month_year: 'December, 2024',
+    location: 'Register for Location',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  {
+    name: 'Unit Network Unconference Los Angeles',
+    image: '/images/losangeles.jpg',
+    link: '/',
+    date: '24th',
+    month_year: 'December, 2024',
+    location: 'Register for Location',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  {
+    name: 'Unit Network Unconference Mexico City',
+    image: '/images/mexicocity.jpg',
+    link: '/',
+    date: '7th',
+    month_year: 'February, 2025',
+    location: 'Register for Location',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  {
+    name: 'Unit Network Unconference Seoul',
+    image: '/images/seoul.jpg',
+    link: '/',
+    date: '7th',
+    month_year: 'March, 2025',
+    location: 'Register for Location',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  {
+    name: 'Unit Network Unconference Panama',
+    image: '/images/panama.jpg',
+    link: '/',
+    date: '21st',
+    month_year: 'March, 2025',
+    location: 'Register for Location',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  {
+    name: 'Unit Network Unconference Tokyo',
+    image: '/images/tokyo.jpg',
+    link: '/',
+    date: '21',
+    month_year: 'March, 2025',
+    location: 'Register for Location',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
   },
