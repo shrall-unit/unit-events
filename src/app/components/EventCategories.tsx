@@ -1,5 +1,3 @@
-import unitLogoWhite from '@public/images/unit-logo-white.svg';
-import { MoveUpRightIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -13,51 +11,69 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 
-type Events = {
+type EventCategory = {
   name: string;
+  description: string;
   image: string;
+  type: string;
   link: string;
 };
 
-const events: Events[] = [
+const events: EventCategory[] = [
   {
     name: 'Crypto Conference',
-    image: '/images/crypto-conference.jpeg',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    image: '/images/crypto-angels.png',
+    type: 'LEARN • NETWORK',
     link: '/',
   },
   {
     name: 'Crypto Angels',
-    image: '/images/crypto-angels.jpeg',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    image: '/images/crypto-angels.png',
+    type: 'LEARN • NETWORK',
     link: '/',
   },
   {
     name: 'Crypto Dance Party',
-    image: '/images/crypto-dance-party.jpeg',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    image: '/images/crypto-angels.png',
+    type: 'PLAY • NETWORK',
     link: '/',
   },
   {
     name: 'Crypto Football Cup',
-    image: '/images/crypto-football-cup.jpeg',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    image: '/images/crypto-angels.png',
+    type: 'PLAY • NETWORK',
     link: '/',
   },
   {
     name: 'Crypto HODL Challenge',
-    image: '/images/crypto-hodl-challenge.jpeg',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    image: '/images/crypto-angels.png',
+    type: 'LEARN • NETWORK',
     link: '/',
   },
   {
     name: 'Crypto Poker Tour',
-    image: '/images/crypto-poker-tour.jpeg',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    image: '/images/crypto-angels.png',
+    type: 'PLAY • NETWORK',
     link: 'https://cryptopokertour.org/',
   },
   {
     name: 'Crypto Run',
-    image: '/images/crypto-run.jpeg',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    image: '/images/crypto-angels.png',
+    type: 'PLAY • NETWORK',
     link: '/',
   },
   {
     name: 'Crypto Ski Week',
-    image: '/images/crypto-ski.jpeg',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    image: '/images/crypto-angels.png',
+    type: 'PLAY • NETWORK',
     link: 'https://cryptoskiweek.com/',
   },
 ];
@@ -85,43 +101,36 @@ function EventCategories() {
               key={event.name}
               className='flex w-max gap-x-6 transition-all duration-500 hover:scale-105 hover:shadow-sm'
             >
-              <div
+              <Link
+                href={event.link}
                 className={cn(
-                  'relative h-96 w-72 overflow-hidden rounded-2xl text-white',
+                  'relative h-96 w-72 overflow-hidden rounded-2xl bg-white text-unit-black-100',
                   events.length - 1 === index && 'mr-8 md:mr-32',
                 )}
               >
-                <Image
-                  src={event.image}
-                  alt={event.name}
-                  priority={true}
-                  quality={100}
-                  fill
-                  className='-z-10 object-cover'
-                />
-                <div className='flex h-full flex-col items-center justify-center gap-y-4 break-words p-8'>
-                  <Image
-                    src={unitLogoWhite}
-                    alt={event.name}
-                    width={32}
-                    height={32}
-                    priority={true}
-                    className='self-start'
-                  />
-                  <div className='absolute -z-10 h-full w-full bg-black opacity-40'></div>
-                  <div className='mt-auto flex w-full flex-col'>
-                    <h4 className='whitespace-break-spaces text-3xl font-semibold'>
+                <div className='flex h-full flex-col items-center justify-center gap-y-4 break-words p-6'>
+                  <div className='flex w-full flex-col gap-y-1'>
+                    <span className='text-xs text-unit-grey-40'>
+                      {event.type}
+                    </span>
+                    <h4 className='mb-2 whitespace-break-spaces text-xl font-semibold'>
                       {event.name}
                     </h4>
-                    <p>Lorem ipsum</p>
+                    <p className='text-sm font-normal text-unit-grey-40'>
+                      {event.description}
+                    </p>
                   </div>
-                  <Link href={event.link} className='w-full'>
-                    <div className='flex items-center gap-x-1 font-medium'>
-                      Explore <MoveUpRightIcon />
-                    </div>
-                  </Link>
+                  <Image
+                    src={event.image}
+                    alt={event.name}
+                    width={0}
+                    height={0}
+                    priority={true}
+                    sizes='100vw'
+                    className='mt-auto w-72 translate-y-12 self-start object-contain'
+                  />
                 </div>
-              </div>
+              </Link>
             </CarouselItem>
           ))}
         </CarouselContent>
