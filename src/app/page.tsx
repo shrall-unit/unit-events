@@ -11,28 +11,27 @@ import UpcomingEvents from './components/UpcomingEvents';
 export default function Home() {
   return (
     <Layout>
-      <section className='relative flex w-full flex-col items-center justify-center'>
+      <section className='relative mt-24 grid max-h-[80vh] grid-cols-2 items-center gap-x-8 overflow-hidden'>
+        <div className='flex flex-col justify-center gap-y-6 pl-8 font-poppins font-semibold xl:pl-32'>
+          <h1 className='text-5xl md:text-6xl'>Unit Events</h1>
+          <p className='text-lg font-light md:text-xl'>
+            Unit Network Announces an Exciting Lineup of Global Crypto Events
+            for 2024
+          </p>
+          <Button variant='default' className='mt-12 w-fit'>
+            Explore Events
+          </Button>
+        </div>
         <Image
-          src='/images/hero-section-background.png'
+          src='/images/logo-3d.png'
           alt='Unit Events'
           priority={true}
           quality={100}
           width={0}
           height={0}
           sizes='100vw'
-          className='h-screen w-full object-cover'
+          className='w-[60vw] max-w-none'
         />
-        <div className='absolute top-0 z-10 h-screen w-screen bg-black opacity-20'></div>
-        <div className='absolute z-50 flex flex-col items-center justify-center gap-y-6 px-8 text-center font-poppins font-semibold text-white xl:px-32'>
-          <h1 className='text-6xl md:text-7xl'>Unit Events</h1>
-          <p className='text-lg font-light tracking-wider md:text-xl'>
-            Unit Network Announces an Exciting Lineup of Global Crypto Events
-            for 2024
-          </p>
-          <Button variant='secondary' className='mt-12'>
-            Explore Events
-          </Button>
-        </div>
       </section>
       <section className='flex flex-col items-start justify-center gap-y-8 px-8 md:items-center md:text-center xl:px-32'>
         <h2 className='text-3xl font-semibold md:text-4xl'>

@@ -20,7 +20,33 @@ const config = {
     extend: {
       colors: {
         unit: {
-          black: '#34354a',
+          black: {
+            100: '#1c1c1c',
+            90: '#2c2c2e',
+            80: '#3a3a3c',
+            60: '#48484a',
+          },
+          grey: {
+            40: '#8e8e93',
+            30: '#c7c7cc',
+            20: '#e5e5ea',
+            10: '#f8f9fc',
+          },
+          purple: {
+            60: '#4b1fff',
+            40: '#6a45ff',
+            20: '#9d85ff',
+          },
+          blue: {
+            60: '#2fadeb',
+            40: '#52b9eb',
+            20: '#8dcceb',
+          },
+          turquoise: {
+            60: '#29ccb4',
+            40: '#85e1cb',
+            20: '#bde1dd',
+          },
         },
       },
       fontFamily: {
