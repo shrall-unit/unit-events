@@ -33,11 +33,37 @@ export default function Home() {
           className='w-[60vw] max-w-none'
         />
       </section>
-      <section className='flex flex-col items-start justify-center gap-y-8 px-8 md:items-center md:text-center xl:px-32'>
+      <section className='flex flex-col items-start justify-center gap-y-8 px-8 py-12 md:items-center md:text-center xl:px-32'>
+        <div className='flex items-center gap-x-12'>
+          <Image
+            src='/images/technology.svg'
+            alt='Technology Logo'
+            priority={true}
+            quality={100}
+            width={40}
+            height={40}
+          />
+          <Image
+            src='/images/innovation.svg'
+            alt='Innovation Logo'
+            priority={true}
+            quality={100}
+            width={40}
+            height={40}
+          />
+          <Image
+            src='/images/life.svg'
+            alt='Life Logo'
+            priority={true}
+            quality={100}
+            width={40}
+            height={40}
+          />
+        </div>
         <h2 className='text-3xl font-semibold md:text-4xl'>
           Play, Learn, Network
         </h2>
-        <p className='text-lg text-slate-500 md:text-xl'>
+        <p className='text-lg text-slate-500 md:px-12 md:text-xl lg:px-24'>
           Explore the future of events with Unit Network where cryptocurrency
           and blockchain enthusiasts come together to forge unforgettable
           experiences!
