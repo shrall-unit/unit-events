@@ -31,7 +31,7 @@ function Navbar() {
       <div
         className={cn(
           'fixed left-0 top-0 z-50 w-full',
-          isScrolled && 'bg-white shadow-sm',
+          isScrolled && 'bg-unit-grey-10 shadow-sm',
         )}
       >
         <div

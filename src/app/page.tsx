@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 
 import EventCategories from './components/EventCategories';
 import FAQ from './components/FAQ';
+import FeaturedEvents from './components/FeaturedEvents';
 import PastEvents from './components/PastEvents';
 import UpcomingEvents from './components/UpcomingEvents';
 
@@ -69,6 +70,7 @@ export default function Home() {
           experiences!
         </p>
       </section>
+      <FeaturedEvents />
       <EventCategories />
       <UpcomingEvents />
       <PastEvents />

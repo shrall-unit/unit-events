@@ -12,7 +12,7 @@ import {
 function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <div className='flex w-full flex-col items-center justify-center gap-y-8 bg-neutral-100 py-32 text-slate-400'>
+    <div className='flex w-full flex-col items-center justify-center gap-y-8 bg-unit-grey-10 py-32 text-unit-grey-40'>
       <div className='flex items-center justify-center gap-x-4'>
         <Link href='#'>
           <FaTwitter className='size-6' />
