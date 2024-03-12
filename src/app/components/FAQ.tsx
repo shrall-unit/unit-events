@@ -47,7 +47,7 @@ function FAQ({ className, ...props }: React.HTMLProps<HTMLDivElement>) {
       {...props}
     >
       <div className='flex flex-col gap-y-4'>
-        <h2 className='text-3xl font-semibold md:text-4xl'>
+        <h2 className='text-2xl font-semibold md:text-3xl'>
           Frequently Asked Questions
         </h2>
       </div>

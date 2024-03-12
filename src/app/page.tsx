@@ -61,7 +61,7 @@ export default function Home() {
             height={40}
           />
         </div>
-        <h2 className='text-3xl font-semibold md:text-4xl'>
+        <h2 className='text-2xl font-semibold md:text-3xl'>
           Play, Learn, Network
         </h2>
         <p className='text-lg text-slate-500 md:px-12 md:text-xl lg:px-24'>

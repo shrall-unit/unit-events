@@ -356,16 +356,16 @@ function UpcomingEvents() {
   return (
     <section className='flex w-full flex-col gap-y-12 lg:px-8 xl:px-32'>
       <div className='flex flex-col gap-y-4 px-8 lg:px-0'>
-        <h2 className='text-3xl font-semibold md:text-4xl'>
+        <h2 className='text-2xl font-semibold md:text-3xl'>
           All Upcoming Events
         </h2>
-        <p className='text-lg text-slate-500 md:text-xl'>
+        <p className='text-base text-unit-grey-40 md:text-lg'>
           Explore our exciting lineup of upcoming events! From Insightful
           Conference Events to thrilling Sport Tournaments, our calendar is
           packed with unforgettable experiences!
         </p>
       </div>
-      <div className='flex flex-col gap-y-8 '>
+      <div className='flex flex-col gap-y-8'>
         {upcomingEvents.slice(0, showCounter).map((event) => (
           <div key={event.name}>
             <div className='hidden shadow-lg drop-shadow-sm lg:flex'>
@@ -389,7 +389,7 @@ function UpcomingEvents() {
                   <span className='text-xs uppercase text-unit-grey-40'>
                     {event.type}
                   </span>
-                  <CardTitle className='text-3xl'>{event.name}</CardTitle>
+                  <CardTitle className='text-2xl'>{event.name}</CardTitle>
                   <CardDescription className='text-unit-grey-40'>
                     {event.location}
                   </CardDescription>
@@ -415,10 +415,10 @@ function UpcomingEvents() {
                   priority={true}
                   quality={100}
                   fill
-                  className='-z-10 object-cover object-top'
+                  className='object-cover object-center'
                 />
-                <div className='absolute -z-10 h-full w-full rounded-l-md bg-black opacity-40' />
-                <div className='flex h-full w-full flex-col items-center justify-center gap-y-2 p-12 font-poppins text-white'>
+                <div className='absolute h-full w-full bg-black opacity-40' />
+                <div className='relative flex h-full w-full flex-col items-center justify-center gap-y-2 p-12 font-poppins text-white'>
                   <span className='text-5xl font-semibold'>{event.date}</span>
                   <span className='font-medium'>{event.month_year}</span>
                 </div>
@@ -442,7 +442,7 @@ function UpcomingEvents() {
         {showCounter < upcomingEvents.length && (
           <div
             onClick={handleShowMore}
-            className='mx-auto flex w-full cursor-pointer items-center justify-center gap-x-4 bg-neutral-100 py-2 text-sm font-medium text-unit-grey-40 hover:opacity-80 lg:w-fit lg:bg-transparent lg:text-2xl lg:text-slate-500'
+            className='mx-auto flex w-full cursor-pointer items-center justify-center gap-x-4 bg-neutral-100 py-2 text-sm font-medium text-unit-grey-40 hover:opacity-80 lg:w-fit lg:bg-transparent lg:text-xl lg:text-slate-500'
           >
             <span className='text-sm lg:text-xl'>See More</span>
             <ChevronDownIcon />

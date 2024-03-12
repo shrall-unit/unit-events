@@ -63,8 +63,8 @@ function FeaturedEvents() {
   return (
     <section id='featured-events' className='flex w-full flex-col gap-y-12'>
       <div className='flex flex-col gap-y-4 px-8 xl:px-32'>
-        <h2 className='text-3xl font-semibold md:text-4xl'>Featured Events</h2>
-        <p className='text-lg text-slate-500 md:text-xl'>
+        <h2 className='text-2xl font-semibold md:text-3xl'>Featured Events</h2>
+        <p className='text-base text-unit-grey-40 md:text-lg'>
           Discover a curated selection of events designed to captivate and
           engage every crypto enthusiast.
         </p>
