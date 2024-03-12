@@ -1,7 +1,5 @@
 'use client';
 import unitLogoBlack from '@public/images/unit-logo-black.svg';
-import unitLogoWhite from '@public/images/unit-logo-white.svg';
-import { useWindowSize } from '@uidotdev/usehooks';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -13,9 +11,8 @@ import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const { height } = useWindowSize();
   const checkScroll = () => {
-    if (height !== null && window.scrollY >= height - 50) {
+    if (window.scrollY >= 10) {
       setIsScrolled(true);
     } else {
       setIsScrolled(false);
@@ -27,26 +24,24 @@ function Navbar() {
     return () => {
       window.removeEventListener('scroll', checkScroll);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [height]);
+  }, []);
 
   return (
     <Sheet>
       <div
         className={cn(
           'fixed left-0 top-0 z-50 w-full',
-          isScrolled ? 'bg-white shadow-sm' : 'bg-transparent',
+          isScrolled && 'shadow-sm',
         )}
       >
         <div
           className={cn(
-            'left-0 right-0 flex w-full items-center gap-x-8 px-8 py-6 font-poppins font-medium transition-all sm:px-16 md:px-24 lg:px-32',
-            isScrolled ? 'text-unit-black' : 'text-white',
+            'left-0 right-0 flex w-full items-center gap-x-8 px-8 py-6 font-poppins font-medium text-unit-black transition-all sm:px-16 md:px-24 lg:px-32',
           )}
         >
           <div className='relative mr-auto size-8 lg:size-12'>
             <Image
-              src={isScrolled ? unitLogoBlack : unitLogoWhite}
+              src={unitLogoBlack}
               alt='Unit Network'
               fill
               priority={true}
