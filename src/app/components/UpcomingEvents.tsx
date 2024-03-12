@@ -1,5 +1,5 @@
 'use client';
-import { ArrowRightIcon, ChevronDownIcon } from 'lucide-react';
+import { ChevronDownIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -15,6 +15,7 @@ import {
 
 type UpcomingEvents = {
   name: string;
+  type: string;
   image: string;
   link: string;
   date: string;
@@ -26,6 +27,7 @@ type UpcomingEvents = {
 const upcomingEvents: UpcomingEvents[] = [
   {
     name: 'Unit Network Unconference @ETHDenver',
+    type: 'Crypto Conference',
     image: '/images/denver.jpg',
     link: '/',
     date: '1st',
@@ -36,6 +38,7 @@ const upcomingEvents: UpcomingEvents[] = [
   },
   {
     name: 'Crypto Ski Week Colorado',
+    type: 'Crypto Ski Week',
     image: '/images/colorado.jpg',
     link: '/',
     date: '4th - 7th',
@@ -46,6 +49,7 @@ const upcomingEvents: UpcomingEvents[] = [
   },
   {
     name: 'Crypto Ski Week Japan',
+    type: 'Crypto Ski Week',
     image: '/images/hokkaido.jpg',
     link: '/',
     date: '15th - 17th',
@@ -56,6 +60,7 @@ const upcomingEvents: UpcomingEvents[] = [
   },
   {
     name: 'Crypto Ski Week Chamonix',
+    type: 'Crypto Ski Week',
     image: '/images/chamonix.jpg',
     link: '/',
     date: '29th - 1st',
@@ -66,6 +71,7 @@ const upcomingEvents: UpcomingEvents[] = [
   },
   {
     name: 'Unit Network Unconference Paris',
+    type: 'Crypto Conference',
     image: '/images/paris.jpg',
     link: '/',
     date: '12th - 15th',
@@ -76,6 +82,7 @@ const upcomingEvents: UpcomingEvents[] = [
   },
   {
     name: 'Unit Network Unconference London',
+    type: 'Crypto Conference',
     image: '/images/london.jpg',
     link: '/',
     date: '26th - 28th',
@@ -86,6 +93,7 @@ const upcomingEvents: UpcomingEvents[] = [
   },
   {
     name: 'Unit Network Unconference Cairo',
+    type: 'Crypto Conference',
     image: '/images/cairo.jpg',
     link: '/',
     date: '10th - 11th',
@@ -96,6 +104,7 @@ const upcomingEvents: UpcomingEvents[] = [
   },
   {
     name: 'Unit Network Unconference Accra',
+    type: 'Crypto Conference',
     image: '/images/accra.jpg',
     link: '/',
     date: '24th - 25th',
@@ -106,6 +115,7 @@ const upcomingEvents: UpcomingEvents[] = [
   },
   {
     name: 'Unit Network Unconference Mumbai',
+    type: 'Crypto Conference',
     image: '/images/mumbai.jpg',
     link: '/',
     date: '8th - 9th',
@@ -116,6 +126,7 @@ const upcomingEvents: UpcomingEvents[] = [
   },
   {
     name: 'Unit Network Unconference Istanbul',
+    type: 'Crypto Conference',
     image: '/images/istanbul.jpg',
     link: '/',
     date: '21th',
@@ -126,6 +137,7 @@ const upcomingEvents: UpcomingEvents[] = [
   },
   {
     name: 'Unit Network Unconference New York',
+    type: 'Crypto Conference',
     image: '/images/newyork.jpg',
     link: '/',
     date: '12th - 13th',
@@ -136,6 +148,7 @@ const upcomingEvents: UpcomingEvents[] = [
   },
   {
     name: 'Unit Network Unconference Miami',
+    type: 'Crypto Conference',
     image: '/images/miami.jpg',
     link: '/',
     date: '26th - 27th',
@@ -146,6 +159,7 @@ const upcomingEvents: UpcomingEvents[] = [
   },
   {
     name: 'Unit Network Unconference Rio',
+    type: 'Crypto Conference',
     image: '/images/rio.jpg',
     link: '/',
     date: '9th - 10th',
@@ -156,6 +170,7 @@ const upcomingEvents: UpcomingEvents[] = [
   },
   {
     name: 'Unit Network Unconference Buenos Aires',
+    type: 'Crypto Conference',
     image: '/images/buenosaires.jpg',
     link: '/',
     date: '23th - 24th',
@@ -166,6 +181,7 @@ const upcomingEvents: UpcomingEvents[] = [
   },
   {
     name: 'Unit Network Unconference @Burning Man',
+    type: 'Crypto Conference',
     image: '/images/burningman.jpg',
     link: '/',
     date: '29th',
@@ -176,6 +192,7 @@ const upcomingEvents: UpcomingEvents[] = [
   },
   {
     name: 'Unit Network Unconference Hong Kong',
+    type: 'Crypto Conference',
     image: '/images/hongkong.jpg',
     link: '/',
     date: '14th - 15th',
@@ -186,6 +203,7 @@ const upcomingEvents: UpcomingEvents[] = [
   },
   {
     name: 'Unit Network Unconference Singapore',
+    type: 'Crypto Conference',
     image: '/images/singapore.jpg',
     link: '/',
     date: '27th - 28th',
@@ -196,6 +214,7 @@ const upcomingEvents: UpcomingEvents[] = [
   },
   {
     name: 'Unit Network Unconference Berlin',
+    type: 'Crypto Conference',
     image: '/images/berlin.jpg',
     link: '/',
     date: '11th - 12th',
@@ -206,6 +225,7 @@ const upcomingEvents: UpcomingEvents[] = [
   },
   {
     name: 'Unit Network Unconference Lisbon',
+    type: 'Crypto Conference',
     image: '/images/lisbon.jpg',
     link: '/',
     date: '25th - 26th',
@@ -216,6 +236,7 @@ const upcomingEvents: UpcomingEvents[] = [
   },
   {
     name: 'Unit Network Unconference Cape Town',
+    type: 'Crypto Conference',
     image: '/images/capetown.jpg',
     link: '/',
     date: '9th - 10th',
@@ -226,6 +247,7 @@ const upcomingEvents: UpcomingEvents[] = [
   },
   {
     name: 'Unit Network Unconference Nairobi',
+    type: 'Crypto Conference',
     image: '/images/nairobi.jpg',
     link: '/',
     date: '22th',
@@ -236,6 +258,7 @@ const upcomingEvents: UpcomingEvents[] = [
   },
   {
     name: 'Unit Network Unconference Dubai',
+    type: 'Crypto Conference',
     image: '/images/dubai.jpg',
     link: '/',
     date: '6th',
@@ -246,6 +269,7 @@ const upcomingEvents: UpcomingEvents[] = [
   },
   {
     name: 'Unit Network Unconference Riyadh',
+    type: 'Crypto Conference',
     image: '/images/riyadh.jpg',
     link: '/',
     date: '13th',
@@ -256,6 +280,7 @@ const upcomingEvents: UpcomingEvents[] = [
   },
   {
     name: 'Unit Network Unconference San Francisco',
+    type: 'Crypto Conference',
     image: '/images/sanfrancisco.jpg',
     link: '/',
     date: '10th',
@@ -266,6 +291,7 @@ const upcomingEvents: UpcomingEvents[] = [
   },
   {
     name: 'Unit Network Unconference Los Angeles',
+    type: 'Crypto Conference',
     image: '/images/losangeles.jpg',
     link: '/',
     date: '24th',
@@ -276,6 +302,7 @@ const upcomingEvents: UpcomingEvents[] = [
   },
   {
     name: 'Unit Network Unconference Mexico City',
+    type: 'Crypto Conference',
     image: '/images/mexicocity.jpg',
     link: '/',
     date: '7th',
@@ -286,6 +313,7 @@ const upcomingEvents: UpcomingEvents[] = [
   },
   {
     name: 'Unit Network Unconference Seoul',
+    type: 'Crypto Conference',
     image: '/images/seoul.jpg',
     link: '/',
     date: '7th',
@@ -296,6 +324,7 @@ const upcomingEvents: UpcomingEvents[] = [
   },
   {
     name: 'Unit Network Unconference Panama',
+    type: 'Crypto Conference',
     image: '/images/panama.jpg',
     link: '/',
     date: '21st',
@@ -306,6 +335,7 @@ const upcomingEvents: UpcomingEvents[] = [
   },
   {
     name: 'Unit Network Unconference Tokyo',
+    type: 'Crypto Conference',
     image: '/images/tokyo.jpg',
     link: '/',
     date: '21',
@@ -317,96 +347,104 @@ const upcomingEvents: UpcomingEvents[] = [
 ];
 
 function UpcomingEvents() {
-  const [showAll, setShowAll] = useState(false);
+  const [showCounter, setShowCounter] = useState(3);
+
+  const handleShowMore = () => {
+    setShowCounter(showCounter + 3);
+  };
+
   return (
     <section className='flex w-full flex-col gap-y-12 lg:px-8 xl:px-32'>
       <div className='flex flex-col gap-y-4 px-8 lg:px-0'>
-        <h2 className='text-3xl font-semibold md:text-4xl'>Upcoming Events</h2>
+        <h2 className='text-3xl font-semibold md:text-4xl'>
+          All Upcoming Events
+        </h2>
         <p className='text-lg text-slate-500 md:text-xl'>
-          A selection of our upcoming events.
+          Explore our exciting lineup of upcoming events! From Insightful
+          Conference Events to thrilling Sport Tournaments, our calendar is
+          packed with unforgettable experiences!
         </p>
       </div>
       <div className='flex flex-col gap-y-8 '>
-        {upcomingEvents
-          .slice(0, showAll ? upcomingEvents.length : 3)
-          .map((event) => (
-            <div key={event.name}>
-              <div className='hidden shadow-lg drop-shadow-sm lg:flex'>
-                <div className='relative h-auto w-96'>
-                  <Image
-                    src={event.image}
-                    alt={event.name}
-                    priority={true}
-                    quality={100}
-                    fill
-                    className='-z-10 rounded-l-md object-cover'
-                  />
-                  <div className='absolute -z-10 h-full w-full rounded-l-md bg-black opacity-40' />
-                  <div className='flex h-full w-full flex-col items-center justify-center gap-y-2 p-12 font-poppins text-white'>
-                    <span className='text-5xl font-semibold'>{event.date}</span>
-                    <span className='font-medium'>{event.month_year}</span>
-                  </div>
+        {upcomingEvents.slice(0, showCounter).map((event) => (
+          <div key={event.name}>
+            <div className='hidden shadow-lg drop-shadow-sm lg:flex'>
+              <div className='relative h-auto w-96'>
+                <Image
+                  src={event.image}
+                  alt={event.name}
+                  priority={true}
+                  quality={100}
+                  fill
+                  className='-z-10 rounded-l-md object-cover'
+                />
+                <div className='absolute -z-10 h-full w-full rounded-l-md bg-black opacity-40' />
+                <div className='flex h-full w-full flex-col items-center justify-center gap-y-2 p-12 font-poppins text-white'>
+                  <span className='text-5xl font-semibold'>{event.date}</span>
+                  <span className='font-medium'>{event.month_year}</span>
                 </div>
-                <Card className='flex-1 p-8'>
-                  <CardHeader>
-                    <CardTitle className='text-3xl'>{event.name}</CardTitle>
-                    <CardDescription className='text-slate-400'>
-                      {event.location}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className='text-slate-400'>
-                    {event.description}
-                  </CardContent>
-                  <CardFooter className='text-slate-400'>
-                    <Link
-                      href={event.link}
-                      className='ml-auto flex items-center gap-x-4'
-                    >
-                      <span>View Events Details</span>
-                      <ArrowRightIcon />
-                    </Link>
-                  </CardFooter>
-                </Card>
               </div>
-              <div className='flex flex-col gap-y-6 lg:hidden'>
-                <div className='relative h-auto w-full'>
-                  <Image
-                    src={event.image}
-                    alt={event.name}
-                    priority={true}
-                    quality={100}
-                    fill
-                    className='-z-10 object-cover object-top'
-                  />
-                  <div className='absolute -z-10 h-full w-full rounded-l-md bg-black opacity-40' />
-                  <div className='flex h-full w-full flex-col items-center justify-center gap-y-2 p-12 font-poppins text-white'>
-                    <span className='text-5xl font-semibold'>{event.date}</span>
-                    <span className='font-medium'>{event.month_year}</span>
-                  </div>
-                </div>
-                <div className='flex flex-col gap-y-2 px-8'>
-                  <h3 className='text-2xl font-semibold'>{event.name}</h3>
-                  <p className='text-sm text-slate-400'>{event.location}</p>
-                </div>
-                <p className='px-8 text-sm text-slate-400'>
+              <Card className='flex-1 p-8'>
+                <CardHeader>
+                  <span className='text-xs uppercase text-unit-grey-40'>
+                    {event.type}
+                  </span>
+                  <CardTitle className='text-3xl'>{event.name}</CardTitle>
+                  <CardDescription className='text-unit-grey-40'>
+                    {event.location}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className='text-unit-grey-40'>
                   {event.description}
-                </p>
-                <Link
-                  href={event.link}
-                  className='flex items-center justify-center gap-x-4 px-8 text-sm text-slate-400'
-                >
-                  <span>View Events Details</span>
-                  <ArrowRightIcon />
-                </Link>
-              </div>
+                </CardContent>
+                <CardFooter className='text-unit-grey-40'>
+                  <Link
+                    href={event.link}
+                    className='ml-auto flex items-center gap-x-4'
+                  >
+                    <span>View Events Details</span>
+                  </Link>
+                </CardFooter>
+              </Card>
             </div>
-          ))}
-        {!showAll && (
+            <div className='flex flex-col gap-y-6 lg:hidden'>
+              <div className='relative h-auto w-full'>
+                <Image
+                  src={event.image}
+                  alt={event.name}
+                  priority={true}
+                  quality={100}
+                  fill
+                  className='-z-10 object-cover object-top'
+                />
+                <div className='absolute -z-10 h-full w-full rounded-l-md bg-black opacity-40' />
+                <div className='flex h-full w-full flex-col items-center justify-center gap-y-2 p-12 font-poppins text-white'>
+                  <span className='text-5xl font-semibold'>{event.date}</span>
+                  <span className='font-medium'>{event.month_year}</span>
+                </div>
+              </div>
+              <div className='flex flex-col gap-y-2 px-8'>
+                <h3 className='text-2xl font-semibold'>{event.name}</h3>
+                <p className='text-sm text-unit-grey-40'>{event.location}</p>
+              </div>
+              <p className='px-8 text-sm text-unit-grey-40'>
+                {event.description}
+              </p>
+              <Link
+                href={event.link}
+                className='flex items-center justify-center gap-x-4 px-8 text-sm text-unit-grey-40'
+              >
+                <span>View Events Details</span>
+              </Link>
+            </div>
+          </div>
+        ))}
+        {showCounter < upcomingEvents.length && (
           <div
-            onClick={() => setShowAll(true)}
-            className='mx-auto flex w-full cursor-pointer items-center justify-center gap-x-4 bg-neutral-100 py-2 text-sm font-medium text-slate-400 hover:opacity-80 lg:w-fit lg:bg-transparent lg:text-2xl lg:text-slate-500'
+            onClick={handleShowMore}
+            className='mx-auto flex w-full cursor-pointer items-center justify-center gap-x-4 bg-neutral-100 py-2 text-sm font-medium text-unit-grey-40 hover:opacity-80 lg:w-fit lg:bg-transparent lg:text-2xl lg:text-slate-500'
           >
-            <span>See All</span>
+            <span className='text-sm lg:text-xl'>See More</span>
             <ChevronDownIcon />
           </div>
         )}
