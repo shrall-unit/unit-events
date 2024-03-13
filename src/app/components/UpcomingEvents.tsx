@@ -376,6 +376,7 @@ function UpcomingEvents() {
                   priority={true}
                   quality={100}
                   fill
+                  sizes='100vw'
                   className='-z-10 rounded-l-md object-cover'
                 />
                 <div className='absolute -z-10 h-full w-full rounded-l-md bg-black opacity-40' />
@@ -415,6 +416,7 @@ function UpcomingEvents() {
                   priority={true}
                   quality={100}
                   fill
+                  sizes='100vw'
                   className='object-cover object-center'
                 />
                 <div className='absolute h-full w-full bg-black opacity-40' />

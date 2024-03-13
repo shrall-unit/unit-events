@@ -44,6 +44,7 @@ function Navbar() {
               src={unitLogoBlack}
               alt='Unit Network'
               fill
+              sizes='100vw'
               priority={true}
               quality={100}
             />
