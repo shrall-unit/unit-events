@@ -429,6 +429,11 @@ function PastEvents() {
             </CarouselItem>
           ))}
         </CarouselContent>
+        {api && (
+          <div className='absolute left-16 top-6 hidden w-fit items-center justify-center rounded-xl bg-unit-black-90/50 px-4 py-2 text-white md:flex xl:left-8'>
+            {api.selectedScrollSnap() + 1} / {count}
+          </div>
+        )}
         <div className='absolute bottom-4 left-0 right-0 mx-auto flex w-fit items-center justify-center gap-x-2'>
           {Array.from({ length: count }).map((_, index) => (
             <FaCircle
