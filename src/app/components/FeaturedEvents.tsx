@@ -23,7 +23,7 @@ type FeaturedEvent = {
 const events: FeaturedEvent[] = [
   {
     title: 'Unit Polkadot Conference',
-    image: '/images/crypto-conference.jpeg',
+    image: '/images/featured-placeholder-1.png',
     type: 'Crypto Conference',
     schedule: '31st March • 3:00 PM GMT+8',
     description:
@@ -32,7 +32,7 @@ const events: FeaturedEvent[] = [
   },
   {
     title: 'Unit Conference New York',
-    image: '/images/crypto-conference.jpeg',
+    image: '/images/featured-placeholder-2.png',
     type: 'Crypto Conference',
     schedule: '31st March • 3:00 PM GMT+8',
     description:
@@ -41,7 +41,7 @@ const events: FeaturedEvent[] = [
   },
   {
     title: 'Niseko Crypto Ski Week',
-    image: '/images/crypto-ski-week.jpeg',
+    image: '/images/featured-placeholder-3.png',
     type: 'Crypto Ski Week',
     schedule: '31st March • 3:00 PM GMT+8',
     description:
@@ -50,7 +50,7 @@ const events: FeaturedEvent[] = [
   },
   {
     title: 'Unit Polkadot Conference',
-    image: '/images/crypto-conference.jpeg',
+    image: '/images/featured-placeholder-4.png',
     type: 'Crypto Conference',
     schedule: '31st March • 3:00 PM GMT+8',
     description:
