@@ -415,7 +415,7 @@ const UpcomingEvents = React.forwardRef<HTMLDivElement, Props>(
                   <CardFooter className='text-unit-grey-40'>
                     <Link
                       href={event.link}
-                      className='ml-auto flex items-center gap-x-4'
+                      className='ml-auto flex items-center gap-x-4 text-unit-purple-60 hover:text-unit-purple-40'
                     >
                       <span>View Events Details</span>
                     </Link>
@@ -448,7 +448,7 @@ const UpcomingEvents = React.forwardRef<HTMLDivElement, Props>(
                 </p>
                 <Link
                   href={event.link}
-                  className='flex items-center justify-center gap-x-4 px-8 text-sm text-unit-grey-40'
+                  className='flex items-center justify-center gap-x-4 px-8 text-sm text-unit-purple-60 hover:text-unit-purple-40'
                 >
                   <span>View Events Details</span>
                 </Link>
