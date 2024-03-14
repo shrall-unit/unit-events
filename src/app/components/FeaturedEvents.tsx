@@ -12,53 +12,7 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 
-type FeaturedEvent = {
-  title: string;
-  image: string;
-  type: string;
-  schedule: string;
-  description: string;
-  link: string;
-};
-
-const events: FeaturedEvent[] = [
-  {
-    title: 'Unit Polkadot Conference',
-    image: '/images/featured-placeholder-1.png',
-    type: 'Crypto Conference',
-    schedule: '31st March • 3:00 PM GMT+8',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac habitasse platea dictumst. Sed ac libero nec odio',
-    link: '/',
-  },
-  {
-    title: 'Unit Conference New York',
-    image: '/images/featured-placeholder-2.png',
-    type: 'Crypto Conference',
-    schedule: '31st March • 3:00 PM GMT+8',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac habitasse platea dictumst. Sed ac libero nec odio',
-    link: '/',
-  },
-  {
-    title: 'Niseko Crypto Ski Week',
-    image: '/images/featured-placeholder-3.png',
-    type: 'Crypto Ski Week',
-    schedule: '31st March • 3:00 PM GMT+8',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac habitasse platea dictumst. Sed ac libero nec odio',
-    link: '/',
-  },
-  {
-    title: 'Unit Polkadot Conference',
-    image: '/images/featured-placeholder-4.png',
-    type: 'Crypto Conference',
-    schedule: '31st March • 3:00 PM GMT+8',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac habitasse platea dictumst. Sed ac libero nec odio',
-    link: '/',
-  },
-];
+import { events } from '@/constant/event';
 
 interface Props extends React.HTMLProps<HTMLDivElement> {
   className?: string;
@@ -91,7 +45,7 @@ const FeaturedEvents = React.forwardRef<HTMLDivElement, Props>(
           <CarouselContent className='mx-8 xl:mx-32 2xl:mx-72'>
             {events.map((event, index) => (
               <CarouselItem
-                key={event.title}
+                key={event.name}
                 className='flex w-max gap-x-6 transition-all duration-500 hover:scale-105 hover:shadow-sm'
               >
                 <Card
@@ -102,8 +56,8 @@ const FeaturedEvents = React.forwardRef<HTMLDivElement, Props>(
                 >
                   <CardHeader className='p-0'>
                     <Image
-                      src={event.image}
-                      alt={event.title}
+                      src={`/images/featured-placeholder-${(index % 4) + 1}.png`}
+                      alt={event.name}
                       priority={true}
                       quality={100}
                       width={0}
@@ -116,8 +70,8 @@ const FeaturedEvents = React.forwardRef<HTMLDivElement, Props>(
                     <span className='text-xs uppercase text-unit-grey-40'>
                       {event.type}
                     </span>
-                    <h3 className='text-xl font-semibold'>{event.title}</h3>
-                    <p className='text-unit-grey-40'>{event.schedule}</p>
+                    <h3 className='text-xl font-semibold'>{event.name}</h3>
+                    <p className='text-unit-grey-40'>{event.time}</p>
                     <p className='text-sm text-unit-grey-40'>
                       {event.description}
                     </p>
