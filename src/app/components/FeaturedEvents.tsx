@@ -87,6 +87,7 @@ const FeaturedEvents = React.forwardRef<HTMLDivElement, Props>(
           </CarouselContent>
           <CarouselPrevious className='hidden opacity-0 transition-all duration-500 disabled:!opacity-0 group-hover/carousel:scale-110 group-hover/carousel:opacity-100 md:flex' />
           <CarouselNext className='hidden opacity-0 transition-all duration-500 disabled:!opacity-0 group-hover/carousel:scale-110 group-hover/carousel:opacity-100 md:flex' />
+          <div className='pointer-events-none absolute top-0 h-[-webkit-fill-available] w-full scale-110 bg-gradient-to-r from-transparent from-80% to-unit-grey-10'></div>
         </Carousel>
       </section>
     );
