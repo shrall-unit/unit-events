@@ -107,7 +107,7 @@ function EventCategories() {
           {events.map((event, index) => (
             <CarouselItem
               key={event.name}
-              className='flex w-max gap-x-6 transition-all duration-500 hover:scale-105 hover:shadow-sm'
+              className='flex w-max max-w-[70vw] gap-x-6 transition-all duration-500 hover:scale-105 hover:shadow-sm sm:max-w-none'
             >
               <Link
                 href={event.link}
@@ -116,7 +116,7 @@ function EventCategories() {
                   events.length - 1 === index && 'mr-8 md:mr-32',
                 )}
               >
-                <div className='box-content flex h-full flex-col items-center justify-center gap-y-4 break-words p-6'>
+                <div className='box-content flex h-full flex-col items-center justify-between gap-y-4 break-words p-6'>
                   <div className='flex w-full flex-col gap-y-1'>
                     <span className='text-xs text-unit-grey-40'>
                       {event.type}

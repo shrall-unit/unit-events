@@ -46,7 +46,7 @@ const FeaturedEvents = React.forwardRef<HTMLDivElement, Props>(
             {events.map((event, index) => (
               <CarouselItem
                 key={event.name}
-                className='flex w-max gap-x-6 transition-all duration-500 hover:scale-105 hover:shadow-sm'
+                className='flex w-max max-w-[80vw] gap-x-6 transition-all duration-500 hover:scale-105 hover:shadow-sm sm:max-w-none'
               >
                 <Card
                   className={cn(
