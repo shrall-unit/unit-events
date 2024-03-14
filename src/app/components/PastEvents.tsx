@@ -402,7 +402,7 @@ function PastEvents() {
   };
 
   return (
-    <section className='flex flex-col items-start justify-center gap-y-8 px-0 py-12 xl:px-32 2xl:px-72'>
+    <section className='flex flex-col items-start justify-center gap-y-8 px-0 py-12 lg:px-8 xl:px-32 2xl:px-72'>
       <div className='flex flex-col gap-y-2 px-8 xl:px-0'>
         <h2 className='text-2xl font-semibold md:text-3xl'>
           Successful Past Events
@@ -412,7 +412,7 @@ function PastEvents() {
           moments again, and stay tuned for more unforgettable events to come!
         </p>
       </div>
-      <Carousel setApi={setApi} className='group/carousel px-8 xl:px-0'>
+      <Carousel setApi={setApi} className='group/carousel px-0'>
         <CarouselContent className='ml-0'>
           {pastEventImages.map((image) => (
             <CarouselItem key={image.image} className='relative basis-full'>
@@ -425,7 +425,7 @@ function PastEvents() {
                   width={0}
                   height={0}
                   sizes='100vw'
-                  className='w-full rounded-xl object-cover'
+                  className='w-full object-cover lg:rounded-xl'
                 />
               </div>
               <div className='absolute bottom-12 left-0 right-0 mx-auto hidden w-fit items-center justify-center rounded-xl bg-unit-black-90/50 px-4 py-2 text-white md:flex'>
