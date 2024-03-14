@@ -6,7 +6,12 @@ import { FaCircle } from 'react-icons/fa6';
 
 import { cn } from '@/lib/utils';
 
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import {
+  Card,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 import {
   Carousel,
   CarouselApi,
@@ -451,7 +456,7 @@ function PastEvents() {
         <CarouselPrevious className='hidden opacity-0 transition-all duration-500 disabled:!opacity-0 group-hover/carousel:scale-110 group-hover/carousel:opacity-100 md:flex' />
         <CarouselNext className='hidden opacity-0 transition-all duration-500 disabled:!opacity-0 group-hover/carousel:scale-110 group-hover/carousel:opacity-100 md:flex' />
       </Carousel>
-      <div className='flex flex-col gap-y-8'>
+      <div className='flex w-full flex-col gap-y-8'>
         {upcomingEvents.slice(0, showCounter).map((event) => (
           <div key={event.name}>
             <div className='hidden shadow-lg drop-shadow-sm lg:flex'>
@@ -471,13 +476,13 @@ function PastEvents() {
                   <span className='font-medium'>{event.month_year}</span>
                 </div>
               </div>
-              <Card className='flex-1 p-4'>
+              <Card className='flex flex-1 items-center p-4'>
                 <CardHeader>
                   <CardTitle className='text-2xl'>{event.name}</CardTitle>
+                  <CardDescription className='text-base text-unit-grey-40'>
+                    {event.description}
+                  </CardDescription>
                 </CardHeader>
-                <CardContent className='text-unit-grey-40'>
-                  {event.description}
-                </CardContent>
               </Card>
             </div>
             <div className='flex flex-col gap-y-6 lg:hidden'>
