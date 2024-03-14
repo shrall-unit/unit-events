@@ -54,7 +54,7 @@ const FeaturedEvents = React.forwardRef<HTMLDivElement, Props>(
                     events.length - 1 === index && 'mr-8 md:mr-32',
                   )}
                 >
-                  <CardHeader className='p-0'>
+                  <CardHeader className='relative p-0'>
                     <Image
                       src={`/images/featured-placeholder-${(index % 4) + 1}.png`}
                       alt={event.name}
@@ -63,8 +63,13 @@ const FeaturedEvents = React.forwardRef<HTMLDivElement, Props>(
                       width={0}
                       height={0}
                       sizes='w-full'
-                      className='h-48 w-80 rounded-t-xl object-cover'
+                      className='peer h-48 w-80 rounded-t-xl object-cover data-[loaded=false]:opacity-0'
+                      data-loaded='false'
+                      onLoad={(event) => {
+                        event.currentTarget.setAttribute('data-loaded', 'true');
+                      }}
                     />
+                    <div className='absolute top-0 h-48 w-80 animate-pulse rounded-t-xl bg-unit-black-60 peer-data-[loaded=true]:hidden' />
                   </CardHeader>
                   <CardContent className='mb-4 flex flex-col gap-y-1 pt-4'>
                     <span className='text-xs uppercase text-unit-grey-40'>

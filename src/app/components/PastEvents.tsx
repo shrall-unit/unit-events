@@ -108,8 +108,13 @@ function PastEvents() {
                   width={0}
                   height={0}
                   sizes='100vw'
-                  className='w-full object-cover lg:rounded-xl'
+                  className='peer w-full object-cover data-[loaded=false]:opacity-0 lg:rounded-xl'
+                  data-loaded='false'
+                  onLoad={(event) => {
+                    event.currentTarget.setAttribute('data-loaded', 'true');
+                  }}
                 />
+                <div className='absolute top-0 h-full w-full animate-pulse bg-unit-black-60 peer-data-[loaded=true]:hidden lg:rounded-xl' />
               </div>
               <div className='absolute bottom-12 left-0 right-0 mx-auto hidden w-fit items-center justify-center rounded-xl bg-unit-black-90/50 px-4 py-2 text-white md:flex'>
                 {image.caption}
@@ -151,9 +156,14 @@ function PastEvents() {
                   quality={100}
                   fill
                   sizes='100vw'
-                  className='-z-10 rounded-l-md object-cover'
+                  data-loaded='false'
+                  onLoad={(event) => {
+                    event.currentTarget.setAttribute('data-loaded', 'true');
+                  }}
+                  className='peer -z-10 rounded-l-md object-cover data-[loaded=false]:hidden'
                 />
-                <div className='absolute -z-10 h-full w-full rounded-l-md bg-black opacity-40' />
+                <div className='absolute -z-10 h-full w-full rounded-l-md bg-black opacity-40 peer-data-[loaded=false]:hidden' />
+                <div className='absolute -z-10 h-full w-full animate-pulse rounded-l-md bg-unit-black-60 peer-data-[loaded=true]:hidden' />
                 <div className='flex h-full w-full flex-col items-center justify-center gap-y-2 p-12 font-poppins text-white'>
                   <span className='text-5xl font-semibold'>{event.date}</span>
                   <span className='font-medium'>{event.month_year}</span>
@@ -177,9 +187,14 @@ function PastEvents() {
                   quality={100}
                   fill
                   sizes='100vw'
-                  className='object-cover object-center'
+                  data-loaded='false'
+                  onLoad={(event) => {
+                    event.currentTarget.setAttribute('data-loaded', 'true');
+                  }}
+                  className='peer object-cover object-center data-[loaded=false]:hidden'
                 />
-                <div className='absolute h-full w-full bg-black opacity-40' />
+                <div className='absolute h-full w-full bg-black opacity-40 peer-data-[loaded=false]:hidden' />
+                <div className='absolute h-full w-full animate-pulse bg-unit-black-60 peer-data-[loaded=true]:hidden' />
                 <div className='relative flex h-full w-full flex-col items-center justify-center gap-y-2 p-12 font-poppins text-white'>
                   <span className='text-5xl font-semibold'>{event.date}</span>
                   <span className='font-medium'>{event.month_year}</span>

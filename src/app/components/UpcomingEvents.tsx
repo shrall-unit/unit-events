@@ -73,9 +73,14 @@ const UpcomingEvents = React.forwardRef<HTMLDivElement, Props>(
                     quality={100}
                     fill
                     sizes='100vw'
-                    className='-z-10 rounded-l-md object-cover'
+                    data-loaded='false'
+                    onLoad={(event) => {
+                      event.currentTarget.setAttribute('data-loaded', 'true');
+                    }}
+                    className='peer -z-10 rounded-l-md object-cover data-[loaded=false]:hidden'
                   />
-                  <div className='absolute -z-10 h-full w-full rounded-l-md bg-black opacity-40' />
+                  <div className='absolute -z-10 h-full w-full rounded-l-md bg-black opacity-40 peer-data-[loaded=false]:hidden' />
+                  <div className='absolute -z-10 h-full w-full animate-pulse rounded-l-md bg-unit-black-60 peer-data-[loaded=true]:hidden' />
                   <div className='flex h-full w-full flex-col items-center justify-center gap-y-2 p-12 font-poppins text-white'>
                     <span className='text-5xl font-semibold'>{event.date}</span>
                     <span className='font-medium'>{event.month_year}</span>
@@ -113,9 +118,14 @@ const UpcomingEvents = React.forwardRef<HTMLDivElement, Props>(
                     quality={100}
                     fill
                     sizes='100vw'
-                    className='object-cover object-center'
+                    data-loaded='false'
+                    onLoad={(event) => {
+                      event.currentTarget.setAttribute('data-loaded', 'true');
+                    }}
+                    className='peer object-cover object-center data-[loaded=false]:hidden'
                   />
-                  <div className='absolute h-full w-full bg-black opacity-40' />
+                  <div className='absolute h-full w-full bg-black opacity-40 peer-data-[loaded=false]:hidden' />
+                  <div className='absolute h-full w-full animate-pulse bg-unit-black-60 peer-data-[loaded=true]:hidden' />
                   <div className='relative flex h-full w-full flex-col items-center justify-center gap-y-2 p-12 font-poppins text-white'>
                     <span className='text-5xl font-semibold'>{event.date}</span>
                     <span className='font-medium'>{event.month_year}</span>
