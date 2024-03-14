@@ -21,60 +21,68 @@ type EventCategory = {
 
 const events: EventCategory[] = [
   {
-    name: 'Crypto Conference',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    image: '/images/crypto-angels.png',
-    type: 'LEARN • NETWORK',
-    link: '/',
-  },
-  {
-    name: 'Crypto Angels',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    image: '/images/crypto-angels.png',
-    type: 'LEARN • NETWORK',
-    link: '/',
+    name: 'Crypto Ski Week',
+    description:
+      'An epic gathering of crypto enthusiasts in some of the world’s most breathtaking ski resorts.',
+    image: '/images/crypto-ski-week.png',
+    type: 'PLAY • NETWORK',
+    link: 'https://cryptoskiweek.com/',
   },
   {
     name: 'Crypto Dance Party',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    image: '/images/crypto-angels.png',
+    description:
+      'A unique gathering which empowers attendees to lead discussions, share insights, and collaborate on the future of crypto.',
+    image: '/images/crypto-dance-party.png',
     type: 'PLAY • NETWORK',
+    link: '/',
+  },
+  {
+    name: 'Crypto Conference',
+    description:
+      'An empowering event where attendees lead discussions and collaborate on the future of crypto.',
+    image: '/images/crypto-conference.png',
+    type: 'LEARN • NETWORK',
     link: '/',
   },
   {
     name: 'Crypto Football Cup',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    image: '/images/crypto-angels.png',
+    description:
+      'Bring together teams from around the world to compete in a friendly but competitive football tournament!',
+    image: '/images/crypto-football-cup.png',
     type: 'PLAY • NETWORK',
     link: '/',
   },
   {
-    name: 'Crypto HODL Challenge',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    image: '/images/crypto-angels.png',
-    type: 'LEARN • NETWORK',
-    link: '/',
-  },
-  {
     name: 'Crypto Poker Tour',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    image: '/images/crypto-angels.png',
+    description:
+      'A series of high-stakes poker tournaments where players can compete for crypto prizes and bragging rights.',
+    image: '/images/crypto-poker-tour.png',
     type: 'PLAY • NETWORK',
     link: 'https://cryptopokertour.org/',
   },
   {
     name: 'Crypto Run',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    image: '/images/crypto-angels.png',
+    description:
+      'Hit the pavement in the Crypto Run, a fun and exhilarating race through scenic routes in major cities around the world.',
+    image: '/images/crypto-run.png',
     type: 'PLAY • NETWORK',
     link: '/',
   },
   {
-    name: 'Crypto Ski Week',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    name: 'Crypto HODL Challenge',
+    description:
+      'A thrilling competition where participants compete to see who can hold onto their crypto assets the longest.',
+    image: '/images/crypto-hodl-challenge.png',
+    type: 'LEARN • NETWORK',
+    link: '/',
+  },
+  {
+    name: 'Crypto Angels',
+    description:
+      'Showcase groundbreaking projects and meet visionary entrepreneurs, investor, and thought leaders in the crypto space.',
     image: '/images/crypto-angels.png',
-    type: 'PLAY • NETWORK',
-    link: 'https://cryptoskiweek.com/',
+    type: 'LEARN • NETWORK',
+    link: '/',
   },
 ];
 
@@ -108,7 +116,7 @@ function EventCategories() {
                   events.length - 1 === index && 'mr-8 md:mr-32',
                 )}
               >
-                <div className='flex h-full flex-col items-center justify-center gap-y-4 break-words p-6'>
+                <div className='box-content flex h-full flex-col items-center justify-center gap-y-4 break-words p-6'>
                   <div className='flex w-full flex-col gap-y-1'>
                     <span className='text-xs text-unit-grey-40'>
                       {event.type}
@@ -127,7 +135,7 @@ function EventCategories() {
                     height={0}
                     priority={true}
                     sizes='100vw'
-                    className='mt-auto w-72 translate-y-12 self-start object-contain'
+                    className='w-full translate-y-4 object-contain'
                   />
                 </div>
               </Link>
