@@ -1,9 +1,11 @@
 'use client';
 import Image from 'next/image';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
+
+import { useIndexRefStore } from '@/store/useIndexRefStore';
 
 import EventCategories from './components/EventCategories';
 import FAQ from './components/FAQ';
@@ -13,6 +15,17 @@ import UpcomingEvents from './components/UpcomingEvents';
 
 export default function Home() {
   const featuredEventsRef = useRef<HTMLDivElement>(null);
+  const faqRef = useRef<HTMLDivElement>(null);
+  const upcomingEventsRef = useRef<HTMLDivElement>(null);
+
+  const { setFAQRef, setFeaturedEventsRef, setUpcomingEventsRef } =
+    useIndexRefStore();
+
+  useEffect(() => {
+    setFeaturedEventsRef(featuredEventsRef);
+    setFAQRef(faqRef);
+    setUpcomingEventsRef(upcomingEventsRef);
+  }, [setFAQRef, setFeaturedEventsRef, setUpcomingEventsRef]);
 
   return (
     <Layout>
@@ -31,7 +44,7 @@ export default function Home() {
                 const top =
                   featuredEventsRef.current.getBoundingClientRect().top +
                   window.scrollY -
-                  100;
+                  120;
                 window.scrollTo({ top, behavior: 'smooth' });
               }
             }}
@@ -88,9 +101,9 @@ export default function Home() {
       </section>
       <FeaturedEvents ref={featuredEventsRef} />
       <EventCategories />
-      <UpcomingEvents />
+      <UpcomingEvents ref={upcomingEventsRef} />
       <PastEvents />
-      <FAQ className='mb-16 md:mb-24 lg:mb-32' />
+      <FAQ ref={faqRef} className='mb-16 md:mb-24 lg:mb-32' />
     </Layout>
   );
 }

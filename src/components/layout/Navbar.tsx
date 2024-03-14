@@ -7,7 +7,9 @@ import { CgMenuRightAlt } from 'react-icons/cg';
 
 import { cn } from '@/lib/utils';
 
-import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
+import { useIndexRefStore } from '@/store/useIndexRefStore';
+
+import { Sheet, SheetClose, SheetContent, SheetTrigger } from '../ui/sheet';
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,6 +27,8 @@ function Navbar() {
       window.removeEventListener('scroll', checkScroll);
     };
   }, []);
+
+  const { upcomingEventsRef, faqRef } = useIndexRefStore();
 
   return (
     <Sheet>
@@ -51,8 +55,34 @@ function Navbar() {
           </div>
           <div className='hidden items-center gap-x-8 md:flex'>
             <Link href='https://www.unit.network/'>Unit Network</Link>
-            <Link href='#events'>Events</Link>
-            <Link href='#faq'>FAQ</Link>
+            <div
+              className='cursor-pointer'
+              onClick={() => {
+                if (upcomingEventsRef && upcomingEventsRef.current) {
+                  const top =
+                    upcomingEventsRef.current.getBoundingClientRect().top +
+                    window.scrollY -
+                    120;
+                  window.scrollTo({ top, behavior: 'smooth' });
+                }
+              }}
+            >
+              Events
+            </div>
+            <div
+              className='cursor-pointer'
+              onClick={() => {
+                if (faqRef && faqRef.current) {
+                  const top =
+                    faqRef.current.getBoundingClientRect().top +
+                    window.scrollY -
+                    120;
+                  window.scrollTo({ top, behavior: 'smooth' });
+                }
+              }}
+            >
+              FAQ
+            </div>
           </div>
           <SheetTrigger>
             <CgMenuRightAlt className='block size-8 md:hidden' />
@@ -65,10 +95,38 @@ function Navbar() {
             <Link href='https://www.unit.network/'>Unit Network</Link>
           </li>
           <li>
-            <Link href='#events'>Events</Link>
+            <SheetClose>
+              <div
+                onClick={() => {
+                  if (upcomingEventsRef && upcomingEventsRef.current) {
+                    const top =
+                      upcomingEventsRef.current.getBoundingClientRect().top +
+                      window.scrollY -
+                      120;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                  }
+                }}
+              >
+                Events
+              </div>
+            </SheetClose>
           </li>
           <li>
-            <Link href='#faq'>FAQ</Link>
+            <SheetClose>
+              <div
+                onClick={() => {
+                  if (faqRef && faqRef.current) {
+                    const top =
+                      faqRef.current.getBoundingClientRect().top +
+                      window.scrollY -
+                      120;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                  }
+                }}
+              >
+                FAQ
+              </div>
+            </SheetClose>
           </li>
         </ul>
       </SheetContent>
