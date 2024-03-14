@@ -72,7 +72,7 @@ const FeaturedEvents = React.forwardRef<HTMLDivElement, Props>(
         ref={ref}
         {...props}
       >
-        <div className='flex flex-col gap-y-4 px-8 xl:px-32'>
+        <div className='flex flex-col gap-y-4 px-8 xl:px-32 2xl:px-72'>
           <h2 className='text-2xl font-semibold md:text-3xl'>
             Featured Events
           </h2>
@@ -88,7 +88,7 @@ const FeaturedEvents = React.forwardRef<HTMLDivElement, Props>(
           }}
           className='group/carousel w-full'
         >
-          <CarouselContent className='mx-8 xl:mx-32'>
+          <CarouselContent className='mx-8 xl:mx-32 2xl:mx-72'>
             {events.map((event, index) => (
               <CarouselItem
                 key={event.title}

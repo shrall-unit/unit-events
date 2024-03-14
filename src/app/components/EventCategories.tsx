@@ -89,7 +89,7 @@ const events: EventCategory[] = [
 function EventCategories() {
   return (
     <section className='flex w-full flex-col gap-y-12'>
-      <div className='flex flex-col gap-y-4 px-8 xl:px-32'>
+      <div className='flex flex-col gap-y-4 px-8 xl:px-32 2xl:px-72'>
         <h2 className='text-2xl font-semibold md:text-3xl'>Event Categories</h2>
         <p className='text-base text-unit-grey-40 md:text-lg'>
           Discover a curated selection of events designed to captivate and
@@ -103,7 +103,7 @@ function EventCategories() {
         }}
         className='group/carousel w-full'
       >
-        <CarouselContent className='mx-8 xl:mx-32'>
+        <CarouselContent className='mx-8 xl:mx-32 2xl:mx-72'>
           {events.map((event, index) => (
             <CarouselItem
               key={event.name}

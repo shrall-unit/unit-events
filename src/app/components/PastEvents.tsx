@@ -402,7 +402,7 @@ function PastEvents() {
   };
 
   return (
-    <section className='flex flex-col items-start justify-center gap-y-8 px-0 py-12 xl:px-32'>
+    <section className='flex flex-col items-start justify-center gap-y-8 px-0 py-12 xl:px-32 2xl:px-72'>
       <div className='flex flex-col gap-y-2 px-8 xl:px-0'>
         <h2 className='text-2xl font-semibold md:text-3xl'>
           Successful Past Events

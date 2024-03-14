@@ -363,7 +363,7 @@ const UpcomingEvents = React.forwardRef<HTMLDivElement, Props>(
     return (
       <section
         className={cn(
-          'flex w-full flex-col gap-y-12 lg:px-8 xl:px-32',
+          'flex w-full flex-col gap-y-12 lg:px-8 xl:px-32 2xl:px-72',
           className,
         )}
         ref={ref}
