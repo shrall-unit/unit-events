@@ -12,7 +12,7 @@ import { useIndexRefStore } from '@/store/useIndexRefStore';
 import { Sheet, SheetClose, SheetContent, SheetTrigger } from '../ui/sheet';
 
 function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(true);
   const checkScroll = () => {
     if (window.scrollY >= 10) {
       setIsScrolled(true);
@@ -22,6 +22,7 @@ function Navbar() {
   };
 
   useEffect(() => {
+    checkScroll();
     window.addEventListener('scroll', checkScroll);
     return () => {
       window.removeEventListener('scroll', checkScroll);
