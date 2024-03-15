@@ -50,7 +50,7 @@ const FeaturedEvents = React.forwardRef<HTMLDivElement, Props>(
               >
                 <Card
                   className={cn(
-                    'w-80',
+                    'flex w-80 flex-col',
                     events.length - 1 === index && 'mr-8 md:mr-32',
                   )}
                 >
@@ -71,14 +71,14 @@ const FeaturedEvents = React.forwardRef<HTMLDivElement, Props>(
                     />
                     <div className='absolute top-0 h-48 w-80 animate-pulse rounded-t-xl bg-unit-black-60 peer-data-[loaded=true]:hidden' />
                   </CardHeader>
-                  <CardContent className='mb-4 flex flex-col gap-y-1 pt-4'>
+                  <CardContent className='mb-4 flex h-full flex-col gap-y-1 pt-4'>
                     <span className='text-xs uppercase text-unit-grey-40'>
                       {event.type}
                     </span>
                     <h3 className='text-xl font-semibold'>{event.name}</h3>
-                    <p className='text-unit-grey-40'>{event.time}</p>
+                    <p className='mt-auto text-unit-grey-40'>{event.time}</p>
                     <p className='text-sm text-unit-grey-40'>
-                      {event.description}
+                      {event.description.substring(0, 100).trimEnd() + '...'}
                     </p>
                   </CardContent>
                 </Card>
