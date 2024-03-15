@@ -29,9 +29,11 @@ export default function Home() {
 
   return (
     <Layout>
-      <section className='relative mt-32 grid max-h-[80vh] w-full grid-cols-1 items-center gap-x-8 gap-y-8 overflow-hidden md:mt-24 md:grid-cols-2'>
-        <div className='flex flex-col items-center justify-center gap-y-6 pl-8 pr-8 font-poppins font-semibold md:items-start md:pr-0 xl:pl-32 2xl:pl-72'>
-          <h1 className='text-5xl md:text-6xl'>Unit Events</h1>
+      <section className='relative mt-32 grid w-full grid-cols-1 items-center gap-x-8 gap-y-8 overflow-hidden px-8 md:grid-cols-2 xl:px-32 2xl:px-72'>
+        <div className='flex flex-col items-center justify-center gap-y-6 font-poppins font-semibold md:items-start md:pr-0'>
+          <h1 className='text-5xl md:text-6xl'>
+            Unit <span className='text-unit-purple-40'>Events</span>
+          </h1>
           <p className='px-8 text-center text-lg font-light sm:px-24 md:px-0 md:text-start md:text-xl'>
             Unit Network Announces an Exciting Lineup of Global Crypto Events
             for 2024
@@ -60,7 +62,7 @@ export default function Home() {
           width={0}
           height={0}
           sizes='100vw'
-          className='mx-auto w-[80vw] max-w-none translate-y-12 md:mx-0 md:w-[60vw] md:translate-y-0'
+          className='w-full object-cover'
         />
       </section>
       <section className='flex flex-col items-start justify-center gap-y-8 px-8 py-12 md:items-center md:text-center xl:px-32 2xl:px-72'>
